@@ -1,7 +1,17 @@
-<form class="ui stacked segment form" action="/dashboard/addplaylist" method="POST">
-  <div class="field">
-    <label>Title</label>
-    <input placeholder="Title" type="text" name="title">
+<form class="ui stacked segment form" action="/dashboard/addstation" method="POST">
+  <div class="two  fields">
+    <div class="field">
+      <label>Station</label>
+      <input placeholder="Station" type="text" name="name">
+    </div>
+    <div class="field">
+      <label>Latitude</label>
+      <input placeholder="Latitude" type="text" name="latitude">
+    </div>
+    <div class="field">
+      <label>Longitude</label>
+      <input placeholder="Longitude" type="text" name="longitude">
+    </div>
   </div>
-  <button class="ui blue submit button">Add Playlist</button>
+  <button class="ui blue submit button">Add Station</button>
 </form>

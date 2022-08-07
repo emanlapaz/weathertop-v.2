@@ -1,0 +1,72 @@
+
+<div class="ui five column red cards">
+  <div class=" card">
+    <div style = "background:black"></div>
+    <div class="content">
+      <div class="header">
+        <h2>${_station.name}<div class="right floated ui icon">
+          <i class="large blue globe icon"></i>
+        </div></h2>
+      </div>
+      <p>Lat: ${_station.latitude.round(2)}</p>
+      <p>Long: ${_station.longitude.round(2)}</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">
+        <h2>Weather <div class="right floated ui icon">
+          <i class="${_station.getLatestReading()?.getWeatherIcons()}"></i>
+        </div></h2>
+      </div>
+      <p>${_station.getLatestReading()?.getWeatherCodes()}</p>
+      <p></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">
+        <h2>Temp<div class="right floated ui icon">
+          <i class="large red temperature low icon"></i>
+        </div></h2>
+        <h2> <div class="right floated ui icon">
+          <i class="#{if _station.readings.size() > 2}${_station?.getTrendTemp()}#{/if}"></i></div></h2>
+      </div>
+      <p>${_station.getLatestReading()?.temperature} ° C</p>
+      <p> ${_station.getLatestReading()?.getTempFahrenheit()?.round(1)}° F</p>
+      <p>min:#{if _station.readings.size() > 1} ${_station?.getMinTemp()?.temperature}#{/if} ° C</p>
+      <p>max:#{if _station.readings.size() > 1} ${_station?.getMaxTemp()?.temperature}#{/if} ° C</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">
+        <h2> Wind <div class="right floated ui icon">
+          <i class="large green wind icon"></i>
+          <h2>  <div class="right floated ui icon">
+            <i class="#{if _station.readings.size() > 2}${_station?.getTrendWind()}#{/if}"></i></div></h2>
+        </div></h2>
+      </div>
+      <p> Beaufort:${_station.getLatestReading()?.getBeaufort()} </p>
+      <p> ${_station.getLatestReading()?.getBeaufortLabel()}</p>
+      <p> Wind Compass: ${_station.getLatestReading()?.getWindCompass()}</p>
+      <p> Feels like: ${_station.getLatestReading()?.getWindChill()?.round(1)}° C</p>
+      <p>min: #{if _station.readings.size() > 1}${_station?.getMinWind()?.windSpeed}#{/if} km/hr</p>
+      <p>max:#{if _station.readings.size() > 1}${_station?.getMaxWind()?.windSpeed}#{/if} km/hr</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">
+        <h2>Pressure <div class="right floated ui icon">
+          <i class="large yellow compress arrows alternate icon"></i>
+          <h2>  <div class="right floated ui icon">
+            <i class="#{if _station.readings.size() > 2}${_station?.getTrendPressure()}#{/if}"></i></div></h2>
+        </div></h2>
+      </div>
+      <p>${_station.getLatestReading()?.pressure}hpa</p>
+      <p>min: #{if _station.readings.size() > 1}${_station?.getMinPress()?.pressure}#{/if} hpa</p>
+      <p>max: #{if _station.readings.size() > 1}${_station?.getMaxPress()?.pressure}#{/if} hpa</p>
+    </div>
+  </div>
+</div>

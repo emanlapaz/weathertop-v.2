@@ -10,7 +10,7 @@ const dashboard = {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
-      title: "Playlist Dashboard",
+      title: "Station Dashboard",
       playlists: playlistStore.getUserPlaylists(loggedInUser.id)
     };
     logger.info("about to render", playlistStore.getAllPlaylists());

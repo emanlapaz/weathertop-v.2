@@ -6,8 +6,8 @@ const router = express.Router();
 const accounts = require("./controllers/accounts.js");
 const dashboard = require("./controllers/dashboard.js");
 const about = require("./controllers/about.js");
-const playlist = require("./controllers/playlist.js");
-const song = require("./controllers/song.js");
+const playlist = require("./controllers/station.js");
+const song = require("./controllers/reading.js");
 
 router.get("/", accounts.index);
 router.get("/login", accounts.login);

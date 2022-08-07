@@ -1,4 +1,4 @@
-Welcome to the Playlist 5
+Welcome to WeatherTop V2
 =========================
 
-Version 5 of the Playlist application
+This is the Javascript version of the weather top app!

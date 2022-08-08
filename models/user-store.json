@@ -13,6 +13,13 @@
       "email": "marge@simpson.com",
       "password": "secret",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstname": "Eugene",
+      "lastname": "Manlapaz",
+      "email": "zionswurm@yahoo.com",
+      "password": "123",
+      "id": "c85eb8e0-16c6-11ed-9592-afdadcdc088b"
     }
   ]
 }

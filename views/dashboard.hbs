@@ -2,64 +2,10 @@
 
 <div class="ui center aligned header">
   <h1>Weather Top Stations</h1></div>
-<h4>Welcome (NAME)</h4>
-<section class="ui segment">
-  <p>LATEST READINGS (STATION)</p>
 
-  <div class="ui five column red cards">
-    <div class=" card">
-      <div style = "background:black"></div>
-      <div class="content">
-        <div class="header">
-          <h2>station.name<div class="right floated ui icon">
-            <i class="large blue globe icon"></i>
-          </div></h2>
-        </div>
-        <p>Lat: </p>
-        <p>Long: </p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="content">
-        <div class="header">
-          <h2>Weather <div class="right floated ui icon">
-            <i class="${_station.getLatestReading()?.getWeatherIcons()}"></i>
-          </div></h2>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="content">
-        <div class="header">
-          <h2>Temp<div class="right floated ui icon">
-            <i class="large red temperature low icon"></i>
-          </div></h2>
-          <h2> <div class="right floated ui icon">
-            <i class="#{if _station.readings.size() > 2}${_station?.getTrendTemp()}#{/if}"></i></div></h2>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="content">
-        <div class="header">
-          <h2> Wind <div class="right floated ui icon">
-            <i class="large green wind icon"></i>
-            <h2>  <div class="right floated ui icon">
-              <i class="#{if _station.readings.size() > 2}${_station?.getTrendWind()}#{/if}"></i></div></h2>
-          </div></h2>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="content">
-        <div class="header">
-          <h2>Pressure <div class="right floated ui icon">
-            <i class="large yellow compress arrows alternate icon"></i>
-            <h2>  <div class="right floated ui icon">
-              <i class="#{if _station.readings.size() > 2}${_station?.getTrendPressure()}#{/if}"></i></div></h2>
-          </div></h2>
-        </div>
+<section class="ui segment">
+
 </section>
-  {{> listplaylists}}
-  {{> addplaylist}}
+  {{> liststations}}
+  {{> addstations}}
 

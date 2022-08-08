@@ -9,7 +9,7 @@ const station = {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
     const viewData = {
-      title: "Station",
+      name: "Station",
       station: stationStore.getStation(stationId)
     };
     response.render("station", viewData);
@@ -28,7 +28,7 @@ const station = {
     const station = stationStore.getStation(stationId);
     const newReading = {
       id: uuid.v1(),
-      title: request.body.title,
+      date: request.body.date,
       code: request.body.code,
       temperature: Number(request.body.temperature),
       windSpeed: Number(request.body.windSpeed),

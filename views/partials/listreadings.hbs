@@ -1,5 +1,6 @@
 <table class="ui table">
   <thead>
+  {{>latestreading}}
     <tr>
       <th>Date/Time</th>
       <th>Code</th>
@@ -10,28 +11,28 @@
     </tr>
   </thead>
   <tbody>
-    {{#each playlist.songs}}
+    {{#each station.readings}}
       <tr>
         <td>
-          {{title}}date
+          {{date}}
         </td>
         <td>
-          {{artist}}code
+          {{code}}
         </td>
         <td>
-          {{duration}}temperature
+          {{temperature}} °C
         </td>
         <td>
-          {{duration}}windspeed
+          {{windSpeed}} kph
         </td>
         <td>
-          {{duration}}winddirection
+          {{windDirection}} degrees
         </td>
         <td>
-          {{duration}}pressure
+          {{pressure}}hpa
         </td>
         <td>
-          <a href="/playlist/{{../playlist.id}}/deletesong/{{id}}" class="ui icon button">
+          <a href="/station/{{../station.id}}/deletereading/{{id}}" class="ui icon button">
             <i class="icon red trash alternate"></i>
           </a>
         </td>

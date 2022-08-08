@@ -2,6 +2,7 @@
 
 const _ = require("lodash");
 const JsonStore = require("./json-store");
+const station = require("../controllers/station");
 
 const stationStore = {
   store: new JsonStore("./models/station-store.json", {
@@ -23,6 +24,7 @@ const stationStore = {
 
   addStations(station) {
     this.store.add(this.collection, station);
+    station.name.push(name);
     this.store.save();
   },
 
@@ -38,15 +40,8 @@ const stationStore = {
   },
 
   addReading(id, reading) {
-    const playlist = this.getStation(id);
+    const station = this.getStation(id);
     station.readings.push(reading);
-
-    let duration = 0;
-    for (let i = 0; i < playlist.reading.length; i++) {
-      duration += playlist.reading[i].duration;
-    }
-
-    station.duration = duration;
     this.store.save();
   },
 

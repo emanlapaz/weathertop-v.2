@@ -1,0 +1,64 @@
+{
+  "stationCollection": [
+    {
+      "id": "01",
+      "name": "Tramore",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "latitude": 52.16235,
+      "longitude": -7.15244,
+      "readings": [
+        {
+          "id": "03",
+          "code": 600,
+          "temperature": 6,
+          "windSpeed": 2,
+          "pressure": 1004,
+          "windDirection": 96
+        },
+        {
+          "id": "04",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "pressure": 1005,
+          "windDirection": 101
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name": "Dunmore",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "latitude": 0,
+      "longitude": 0,
+      "readings": [
+        {
+          "id": "06",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "pressure": 999,
+          "windDirection": 98
+        },
+        {
+          "id": "07",
+          "code": 200,
+          "temperature": 0.5,
+          "windSpeed": 3.5,
+          "pressure": 1000,
+          "windDirection": 102
+        }
+      ]
+    },
+    {
+      "id": "f6265150-16c8-11ed-9592-afdadcdc088b",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "readings": []
+    },
+    {
+      "id": "029254f0-16cb-11ed-9592-afdadcdc088b",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "readings": []
+    }
+  ]
+}

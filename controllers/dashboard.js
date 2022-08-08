@@ -29,6 +29,7 @@ const dashboard = {
     const newStation = {
       id: uuid.v1(),
       userid: loggedInUser.id,
+      name:[],
       readings: []
     };
     logger.debug("Creating a new Station", newStation);

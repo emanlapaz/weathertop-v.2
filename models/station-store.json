@@ -2,13 +2,14 @@
   "stationCollection": [
     {
       "id": "01",
-      "name": "Tramore",
+      "stationName": "Tramore",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "latitude": 52.16235,
       "longitude": -7.15244,
       "readings": [
         {
           "id": "03",
+          "date": "2021-04-25T07:20:42.138Z",
           "code": 600,
           "temperature": 6,
           "windSpeed": 2,
@@ -17,6 +18,16 @@
         },
         {
           "id": "04",
+          "date": "2021-05-25T07:20:42.138Z",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "pressure": 1005,
+          "windDirection": 101
+        },
+        {
+          "id": "04",
+          "date": "2021-06-25T07:20:42.138Z",
           "code": 700,
           "temperature": 8,
           "windSpeed": 1,
@@ -27,13 +38,14 @@
     },
     {
       "id": "05",
-      "name": "Dunmore",
+      "stationName": "Dunmore",
       "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "latitude": 0,
-      "longitude": 0,
+      "latitude": 52.698363,
+      "longitude": -7.262509,
       "readings": [
         {
           "id": "06",
+          "date": "2021-02-25T07:20:42.138Z",
           "code": 700,
           "temperature": 8,
           "windSpeed": 1,
@@ -42,18 +54,23 @@
         },
         {
           "id": "07",
+          "date": "2021-03-25T07:20:42.138Z",
           "code": 200,
           "temperature": 0.5,
           "windSpeed": 3.5,
           "pressure": 1000,
           "windDirection": 102
+        },
+        {
+          "id": "273febf0-19e1-11ed-b95e-9be671962e51",
+          "date": "",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
         }
       ]
-    },
-    {
-      "id": "f6265150-16c8-11ed-9592-afdadcdc088b",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "readings": []
     },
     {
       "id": "029254f0-16cb-11ed-9592-afdadcdc088b",
@@ -76,45 +93,134 @@
           "windSpeed": 1,
           "windDirection": 100,
           "pressure": 1001
+        },
+        {
+          "id": "30f4cd90-19dd-11ed-884f-0b7286179ec9",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "32ac8fb0-19dd-11ed-884f-0b7286179ec9",
+          "code": "100",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "6039f030-19dd-11ed-9950-894e248bf02f",
+          "code": "700",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "73953ae0-19dd-11ed-9950-894e248bf02f",
+          "date": "2021-05-23-01:35:00",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "9bac2390-19dd-11ed-9950-894e248bf02f",
+          "date": "",
+          "code": "",
+          "temperature": 12,
+          "windSpeed": 12,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "b95bee70-19dd-11ed-9950-894e248bf02f",
+          "date": "00",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": null,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "cbca8f30-19dd-11ed-9950-894e248bf02f",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 6,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "e2585520-19dd-11ed-b1fc-bde6f8ba2f06",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "ec1b6ac0-19dd-11ed-a59f-59e2435af6be",
+          "date": "1",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
         }
       ]
     },
     {
-      "id": "aa0effe0-19b8-11ed-a2f3-33769cd01ace",
+      "id": "65103af0-19de-11ed-8705-931a2650a1c0",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationName": "naas",
+      "latitude": "12.21",
+      "longitude": "12.34",
+      "readings": [
+        {
+          "id": "7255c090-19de-11ed-bc89-a17b809d32ab",
+          "date": "2021-05-23-01:35:00",
+          "code": "700",
+          "temperature": 11,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        }
+      ]
+    },
+    {
+      "id": "d1845c20-19de-11ed-b630-2f5b795fd023",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationName": "newbridge",
+      "latitude": "",
+      "longitude": "",
       "readings": []
     },
     {
-      "id": "040661a0-19dc-11ed-884f-0b7286179ec9",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "readings": [
-        {
-          "id": "05f427e0-19dc-11ed-884f-0b7286179ec9",
-          "date": "date",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "09fb0a20-19dc-11ed-884f-0b7286179ec9",
-          "date": "date",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 999
-        },
-        {
-          "id": "41663430-19dc-11ed-884f-0b7286179ec9",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        }
-      ]
+      "id": "b1d88840-19e0-11ed-b727-33bbed36e263",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "stationName": "newbridge",
+      "latitude": "12.21",
+      "longitude": "12.34",
+      "readings": []
+    },
+    {
+      "id": "c71ff610-19e1-11ed-b844-a9a630ffcfd6",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "stationName": "Dublin",
+      "latitude": "12",
+      "longitude": "12",
+      "readings": []
+    },
+    {
+      "id": "feca4c00-19e1-11ed-b844-a9a630ffcfd6",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "stationName": "Carlow",
+      "latitude": "",
+      "longitude": "",
+      "readings": []
     }
   ]
 }

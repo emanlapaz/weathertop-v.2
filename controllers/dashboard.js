@@ -29,7 +29,9 @@ const dashboard = {
     const newStationList = {
       id: uuid.v1(),
       userid: loggedInUser.id,
-      title: request.body.title,
+      stationName: request.body.stationName,
+      latitude: request.body.latitude,
+      longitude: request.body.longitude,
       readings: []
     };
     logger.debug("Creating a new StationList", newStationList);

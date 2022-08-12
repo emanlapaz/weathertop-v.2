@@ -26,14 +26,14 @@ const dashboard = {
 
   addStation(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    const newStation = {
+    const newStationList = {
       id: uuid.v1(),
       userid: loggedInUser.id,
-      name:[],
+      title: request.body.title,
       readings: []
     };
-    logger.debug("Creating a new Station", newStation);
-    stationStore.addStations(newStation);
+    logger.debug("Creating a new StationList", newStationList);
+    stationStore.addStations(newStationList);
     response.redirect("/dashboard");
   }
 };

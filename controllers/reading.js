@@ -19,7 +19,7 @@ const reading = {
   update(request, response) {
     const stationId = request.params.id;
     const readingId = request.params.readingid;
-    const reading = stationnStore.getReading(stationId, readingId)
+    const reading = stationStore.getReading(stationId, readingId)
     const newReading = {
       date: request.body.date,
       code: request.body.code,

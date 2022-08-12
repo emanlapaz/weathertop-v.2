@@ -1,8 +1,8 @@
-<form class="ui stacked segment form" action="/stations/${_station.id}/addreading" method="POST">
+<form class="ui stacked segment form" action="/station/{{station.id}}/addreading" method="POST">
   <div class="two fields">
     <div class="field">
       <label>Date/Time</label>
-      <input placeholder="yyyy-mm-dd hh:mm:ss" value="date" type="text" name="date">
+      <input placeholder="yyyy-mm-dd hh:mm:ss" type="text" name="name">
     </div>
     <div class="field">
       <label>Weather Code</label>

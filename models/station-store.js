@@ -2,7 +2,6 @@
 
 const _ = require("lodash");
 const JsonStore = require("./json-store");
-const station = require("../controllers/station");
 
 const stationStore = {
   store: new JsonStore("./models/station-store.json", {
@@ -24,7 +23,7 @@ const stationStore = {
 
   addStations(station) {
     this.store.add(this.collection, station);
-    station.name.push(name);
+    //station.name.push(name);
     this.store.save();
   },
 
@@ -53,8 +52,8 @@ const stationStore = {
   },
 
   getReading(id, readingId) {
-    const station = this.store.findOneBy(this.collection, { id: id });
-    const readings = station.readings.filter(reading => reading.id == readingId);
+    const stationList = this.store.findOneBy(this.collection, { id: id });
+    const readings = stationList.readings.filter(reading => reading.id == readingId);
     return readings[0];
   },
 

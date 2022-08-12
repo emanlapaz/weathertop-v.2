@@ -58,7 +58,63 @@
     {
       "id": "029254f0-16cb-11ed-9592-afdadcdc088b",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "readings": [
+        {
+          "id": "ed979560-19db-11ed-884f-0b7286179ec9",
+          "date": "date",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "f90ca0c0-19db-11ed-884f-0b7286179ec9",
+          "date": "date",
+          "code": "1",
+          "temperature": 4,
+          "windSpeed": 1,
+          "windDirection": 100,
+          "pressure": 1001
+        }
+      ]
+    },
+    {
+      "id": "aa0effe0-19b8-11ed-a2f3-33769cd01ace",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "readings": []
+    },
+    {
+      "id": "040661a0-19dc-11ed-884f-0b7286179ec9",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "readings": [
+        {
+          "id": "05f427e0-19dc-11ed-884f-0b7286179ec9",
+          "date": "date",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        },
+        {
+          "id": "09fb0a20-19dc-11ed-884f-0b7286179ec9",
+          "date": "date",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 999
+        },
+        {
+          "id": "41663430-19dc-11ed-884f-0b7286179ec9",
+          "code": "",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
+        }
+      ]
     }
   ]
 }

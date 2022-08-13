@@ -15,7 +15,8 @@
   <div class="card">
     <div class="content">
       <div class="header">
-        <h2>Weather <div class="right floated ui icon">
+        <h2>Weather
+          <h2>{{latestReading.code}}</h2><div class="right floated ui icon">
           <i class="${_station.getLatestReading()?.getWeatherIcons()}"></i>
         </div></h2>
       </div>
@@ -32,7 +33,7 @@
         <h2> <div class="right floated ui icon">
           <i class="#{if _station.readings.size() > 2}${_station?.getTrendTemp()}#{/if}"></i></div></h2>
       </div>
-      <p>° C</p>
+      <p>{{latestReading.temperature}}° C</p>
       <p>° F</p>
       <p>MinTemp ° C</p>
       <p>MaxTemp ° C</p>
@@ -64,7 +65,7 @@
             <i class="#{if _station.readings.size() > 2}${_station?.getTrendPressure()}#{/if}"></i></div></h2>
         </div></h2>
       </div>
-      <p>hpa</p>
+      <p>{{latestReading.pressure}}hpa</p>
       <p>min: hpa</p>
       <p>max: hpa</p>
     </div>

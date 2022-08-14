@@ -16,8 +16,8 @@
     <div class="content">
       <div class="header">
         <h2>Weather
-          <h2>{{latestReading.code}}</h2><div class="right floated ui icon">
-          <i class="${_station.getLatestReading()?.getWeatherIcons()}"></i>
+          <h2>{{weatherCode}}</h2><div class="right floated ui icon">
+          <i class="{{weatherIcon}}"></i>
         </div></h2>
       </div>
       <p>getWeatherCodes</p>
@@ -34,7 +34,7 @@
           <i class="#{if _station.readings.size() > 2}${_station?.getTrendTemp()}#{/if}"></i></div></h2>
       </div>
       <p>{{latestReading.temperature}}° C</p>
-      <p>° F</p>
+      <p>{{fahrenheit}}° F</p>
       <p>MinTemp ° C</p>
       <p>MaxTemp ° C</p>
     </div>
@@ -48,10 +48,10 @@
             <i class="#{if _station.readings.size() > 2}${_station?.getTrendWind()}#{/if}"></i></div></h2>
         </div></h2>
       </div>
-      <p> Beaufort:</p>
-      <p> BeaufortLabel</p>
-      <p> Wind Compass:</p>
-      <p> Feels like:WindChill° C</p>
+      <p> Beaufort:{{beaufortReading}}</p>
+      <p> {{beaufortLabel}}</p>
+      <p> Wind Compass: {{windCompass}}</p>
+      <p> Feels like: {{windChill}}° C</p>
       <p>min:windSpeed km/hr</p>
       <p>max:windSpeed km/hr</p>
     </div>

@@ -31,7 +31,7 @@
           <i class="large red temperature low icon"></i>
         </div></h2>
         <h2> <div class="right floated ui icon">
-          <i class="#{if _station.readings.size() > 2}${_station?.getTrendTemp()}#{/if}"></i></div></h2>
+          <i class="{{trendTemp}}"></i></div></h2>
       </div>
       <p>{{latestReading.temperature}}° C</p>
       <p>{{fahrenheit}}° F</p>
@@ -45,7 +45,7 @@
         <h2> Wind <div class="right floated ui icon">
           <i class="large green wind icon"></i>
           <h2>  <div class="right floated ui icon">
-            <i class="#{if _station.readings.size() > 2}${_station?.getTrendWind()}#{/if}"></i></div></h2>
+            <i class="{{trendWind}}"></i></div></h2>
         </div></h2>
       </div>
       <p> Beaufort:{{beaufortReading}}</p>
@@ -62,7 +62,7 @@
         <h2>Pressure <div class="right floated ui icon">
           <i class="large yellow compress arrows alternate icon"></i>
           <h2>  <div class="right floated ui icon">
-            <i class="#{if _station.readings.size() > 2}${_station?.getTrendPressure()}#{/if}"></i></div></h2>
+            <i class="{{trendPress}}"></i></div></h2>
         </div></h2>
       </div>
       <p>{{latestReading.pressure}}hpa</p>

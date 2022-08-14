@@ -21,9 +21,9 @@ const station = {
     const beaufortReading= analytics.getBeaufortReading(latestReading.windSpeed);
     const beaufortLabel= analytics.getBeaufortlabel(beaufortReading);
     const windCompass= analytics.getWindCompass(latestReading.windDirection);
-    //const trendWind= analytics.getTrendWind(latestReading.windSpeed, lastTwoReading.windSpeed, lastThreeReading.windSpeed);
-   // const trend= analytics.getTrend(station.temperature);
-
+    const trendWind= analytics.getTrendWind(latestReading.windSpeed, lastTwoReading.windSpeed, lastThreeReading.windSpeed);
+    const trendTemp= analytics.getTrendTemp(latestReading.temperature, lastTwoReading.temperature, lastThreeReading.temperature);
+    const trendPress= analytics.getTrendPress(latestReading.pressure, lastTwoReading.pressure, lastThreeReading.pressure);
     const viewData = {
       name: "Station",
       station: stationStore.getStation(stationId),
@@ -37,8 +37,9 @@ const station = {
       beaufortReading: beaufortReading,
       beaufortLabel: beaufortLabel,
       windCompass: windCompass,
-     // trend: trend
-      //trendWind: trendWind
+      trendTemp: trendTemp,
+      trendWind: trendWind,
+      trendPress: trendPress
     };
     response.render("station", viewData);
   },

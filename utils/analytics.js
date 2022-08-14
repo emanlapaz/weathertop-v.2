@@ -172,31 +172,42 @@ const analytics = {
     return windCompass;
   },
 
-  /*getTrend(latestReading, lastTwoReading, lastThreeReading) {
-    let A = latestReading.temperature;
-    let B = lastTwoReading.temperature;
-    let C = lastThreeReading.temperature;
-    let trend = null;
+  getTrendTemp(latestReading, lastTwoReading, lastThreeReading) {
+    let A = latestReading;
+    let B = lastTwoReading;
+    let C = lastThreeReading;
+    let trendTemp = null;
     if (A > B && B > C) {
-      trend = "red arrow alternate circle up icon";
+      trendTemp = "red arrow alternate circle up icon";
     } else if (A < B && B < C) {
-      trend = "blue arrow alternate circle down icon";
-    } else if (A > B && B < C) {
-      return trend;
+      trendTemp = "blue arrow alternate circle down icon";
     }
-  }
+    return trendTemp;
+  },
 
-  /*getTrendWind() {
-    let A = this.getLatestReading().windSpeed;
-    let B = this.getLastTwoReading().windSpeed;
-    let C = this.getLastThreeReading().windSpeed;
+  getTrendWind(latestReading, lastTwoReading, lastThreeReading) {
+    let A = latestReading;
+    let B = lastTwoReading;
+    let C = lastThreeReading;
     let trendWind = null;
     if (A > B && B > C) {
       trendWind = "red arrow alternate circle up icon";
     } else if (A < B && B < C) {
       trendWind = "blue arrow alternate circle down icon";
-    } else if (A > B && B < C) {
-      return trendWind;
-    }*/
+    }
+    return trendWind;
+  },
+  getTrendPress(latestReading, lastTwoReading, lastThreeReading) {
+    let A = latestReading;
+    let B = lastTwoReading;
+    let C = lastThreeReading;
+    let trendPress = null;
+    if (A > B && B > C) {
+      trendPress = "red arrow alternate circle up icon";
+    } else if (A < B && B < C) {
+      trendPress = "blue arrow alternate circle down icon";
+    }
+    return trendPress;
+  }
 }
 module.exports = analytics;

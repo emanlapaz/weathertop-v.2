@@ -26,29 +26,20 @@
           "pressure": 100
         },
         {
-          "id": "285a20b0-1bb1-11ed-9c24-0195b592c253",
+          "id": "9afe0f10-1be7-11ed-8933-d38f73572404",
           "date": "",
           "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
+          "temperature": 3,
+          "windSpeed": 3,
           "windDirection": 0,
-          "pressure": 0
+          "pressure": 3
         },
         {
-          "id": "36787a20-1bb1-11ed-9c24-0195b592c253",
-          "date": "",
-          "code": "800",
-          "temperature": 12,
-          "windSpeed": 2,
-          "windDirection": 1,
-          "pressure": 1001
-        },
-        {
-          "id": "09a4ea60-1bca-11ed-960b-0ff7fa70bc29",
+          "id": "9e8c17d0-1be7-11ed-8933-d38f73572404",
           "date": "",
           "code": "",
-          "temperature": 12,
-          "windSpeed": 0,
+          "temperature": 1,
+          "windSpeed": 1,
           "windDirection": 0,
           "pressure": 0
         }
@@ -169,6 +160,14 @@
       "id": "172766c0-1abe-11ed-8dd2-a9b6ff22a009",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "stationName": "newbridge",
+      "latitude": "",
+      "longitude": "",
+      "readings": []
+    },
+    {
+      "id": "ad858470-1be6-11ed-837c-4fe90e02a84d",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationName": "",
       "latitude": "",
       "longitude": "",
       "readings": []

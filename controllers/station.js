@@ -11,19 +11,22 @@ const station = {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
     const station = stationStore.getStation(stationId);
-    const latestReading= analytics.getLatestReading(station);
-    const lastTwoReading= analytics.getLastTwoReading(station);
-    const lastThreeReading= analytics.getLastThreeReading(station);
-    const fahrenheit= analytics.getFahrenheit(latestReading.temperature);
-    const weatherCode= analytics.getWeatherCode(latestReading.code);
-    const weatherIcon= analytics.getWeatherIcon(latestReading.code);
-    const windChill= analytics.getWindChill(latestReading.temperature, latestReading.windSpeed);
-    const beaufortReading= analytics.getBeaufortReading(latestReading.windSpeed);
-    const beaufortLabel= analytics.getBeaufortlabel(beaufortReading);
-    const windCompass= analytics.getWindCompass(latestReading.windDirection);
-    const trendWind= analytics.getTrendWind(latestReading.windSpeed, lastTwoReading.windSpeed, lastThreeReading.windSpeed);
-    const trendTemp= analytics.getTrendTemp(latestReading.temperature, lastTwoReading.temperature, lastThreeReading.temperature);
-    const trendPress= analytics.getTrendPress(latestReading.pressure, lastTwoReading.pressure, lastThreeReading.pressure);
+    const latestReading= analytics?.getLatestReading(station);
+    const lastTwoReading= analytics?.getLastTwoReading(station);
+    const lastThreeReading= analytics?.getLastThreeReading(station);
+    const fahrenheit= analytics?.getFahrenheit(latestReading?.temperature);
+    const weatherCode= analytics?.getWeatherCode(latestReading?.code);
+    const weatherIcon= analytics?.getWeatherIcon(latestReading?.code);
+    const windChill= analytics?.getWindChill(latestReading?.temperature, latestReading?.windSpeed);
+    const beaufortReading= analytics?.getBeaufortReading(latestReading?.windSpeed);
+    const beaufortLabel= analytics?.getBeaufortlabel(beaufortReading);
+    const windCompass= analytics?.getWindCompass(latestReading?.windDirection);
+    const trendWind= analytics?.getTrendWind(latestReading?.windSpeed, lastTwoReading?.windSpeed, lastThreeReading?.windSpeed);
+    const trendTemp= analytics?.getTrendTemp(latestReading?.temperature, lastTwoReading?.temperature, lastThreeReading?.temperature);
+    const trendPress= analytics?.getTrendPress(latestReading?.pressure, lastTwoReading?.pressure, lastThreeReading?.pressure);
+    const timeStamp= analytics?.getTimeStamp();
+    const minTemp= analytics?.getMinTemp(station.readings);
+
     const viewData = {
       name: "Station",
       station: stationStore.getStation(stationId),
@@ -31,15 +34,17 @@ const station = {
       lastTwoReading: lastTwoReading,
       lastThreeReading: lastThreeReading,
       fahrenheit: fahrenheit,
-      weatherCode: weatherCode.get(latestReading.code),
-      weatherIcon: weatherIcon.get(latestReading.code),
+      weatherCode: weatherCode?.get(latestReading?.code),
+      weatherIcon: weatherIcon?.get(latestReading?.code),
       windChill: windChill,
       beaufortReading: beaufortReading,
       beaufortLabel: beaufortLabel,
       windCompass: windCompass,
       trendTemp: trendTemp,
       trendWind: trendWind,
-      trendPress: trendPress
+      trendPress: trendPress,
+      timeStamp: timeStamp,
+      minTemp: minTemp
     };
     response.render("station", viewData);
   },

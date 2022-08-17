@@ -1,6 +1,7 @@
 "use strict";
 
 const { map } = require("lodash/collection");
+
 const analytics = {
 
   getLatestReading(station) {
@@ -31,6 +32,16 @@ const analytics = {
     let fahrenheit = null;
     fahrenheit = ((temperature * 9) / 5) + 32;
     return fahrenheit;
+  },
+
+  getMinTemp(temperature) {
+    let minTemp = temperature;
+    for(let i=0 ; i < temperature; i++) {
+      if (minTemp < temperature[i]) {
+        minTemp = temperature;
+      }
+    }
+    return minTemp
   },
 
   getWeatherCode() {
@@ -208,6 +219,11 @@ const analytics = {
       trendPress = "blue arrow alternate circle down icon";
     }
     return trendPress;
-  }
+  },
+
+  getTimeStamp() {
+    const timeStamp = new Date();
+    return timeStamp.toISOString();
+  },
 }
 module.exports = analytics;

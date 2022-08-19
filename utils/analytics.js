@@ -1,6 +1,8 @@
 "use strict";
 
 const { map } = require("lodash/collection");
+const { value } = require("lodash/seq");
+const { values } = require("lodash/object");
 
 const analytics = {
 
@@ -31,17 +33,66 @@ const analytics = {
   getFahrenheit(temperature) {
     let fahrenheit = null;
     fahrenheit = ((temperature * 9) / 5) + 32;
-    return fahrenheit;
+    return fahrenheit.toFixed(1);
   },
-
-  getMinTemp(temperature) {
-    let minTemp = temperature;
-    for(let i=0 ; i < temperature; i++) {
-      if (minTemp < temperature[i]) {
-        minTemp = temperature;
+  getMinTemp(readings) {
+    let minTemp = readings[0]?.temperature;
+    for (let reading of readings) {
+      if (reading?.temperature < minTemp) {
+        minTemp = reading?.temperature;
       }
     }
     return minTemp
+  },
+
+  getMinWind(readings) {
+    let minWind = readings[0]?.windSpeed;
+    for (let reading of readings) {
+      if (reading?.windSpeed < minWind) {
+        minWind = reading?.windSpeed;
+      }
+    }
+    return minWind
+  },
+
+  getMinPress(readings) {
+    let minPress = readings[0]?.pressure;
+    for (let reading of readings) {
+      if (reading?.pressure < minPress) {
+        minPress= reading?.pressure;
+    }
+  }
+    return minPress
+  },
+
+  getMaxTemp(readings) {
+    let maxTemp = readings[0]?.temperature;
+    for (let reading of readings) {
+      if (reading?.temperature > maxTemp) {
+        maxTemp= reading?.temperature;
+      }
+    }
+    return maxTemp
+  },
+
+  getMaxWind(readings) {
+    let maxWind = readings[0]?.windSpeed;
+    for (let reading of readings) {
+      if (reading?.windSpeed > maxWind) {
+        maxWind= reading?.windSpeed;
+      }
+    }
+    return maxWind
+  },
+
+  getMaxPress(readings) {
+    let maxPress = readings[0]?.pressure;
+    for (let reading of readings) {
+      if (reading?.pressure > maxPress) {
+        maxPress= reading?.pressure;
+      }
+    }
+    return maxPress
   },
 
   getWeatherCode() {
@@ -73,7 +124,7 @@ const analytics = {
   getWindChill(temperature, windSpeed) {
     let windChill = null;
     windChill = 13.12 + (0.6215 * temperature) - 11.37 * (Math.pow(windSpeed, 0.16)) + (0.3965 * temperature) * (Math.pow(windSpeed, 0.16));
-    return windChill;
+    return windChill.toFixed(1);
   },
 
   getBeaufortReading(windSpeed) {

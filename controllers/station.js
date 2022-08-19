@@ -5,6 +5,10 @@ const stationStore = require("../models/station-store");
 const uuid = require("uuid");
 const analytics = require("../utils/analytics");
 const { last } = require("lodash/array");
+const { contentDisposition } = require("express/lib/utils");
+const reading = require("../controllers/reading");
+const { value } = require("lodash/seq");
+
 
 const station = {
   index(request, response) {
@@ -26,6 +30,11 @@ const station = {
     const trendPress= analytics?.getTrendPress(latestReading?.pressure, lastTwoReading?.pressure, lastThreeReading?.pressure);
     const timeStamp= analytics?.getTimeStamp();
     const minTemp= analytics?.getMinTemp(station.readings);
+    const minWind= analytics?.getMinWind(station.readings);
+    const minPress= analytics?.getMinPress(station.readings);
+    const maxTemp= analytics?.getMaxTemp(station.readings);
+    const maxWind= analytics?.getMaxWind(station.readings);
+    const maxPress= analytics?.getMaxPress(station.readings);
 
     const viewData = {
       name: "Station",
@@ -44,7 +53,12 @@ const station = {
       trendWind: trendWind,
       trendPress: trendPress,
       timeStamp: timeStamp,
-      minTemp: minTemp
+      minTemp: minTemp,
+      minWind: minWind,
+      minPress: minPress,
+      maxTemp: maxTemp,
+      maxWind: maxWind,
+      maxPress: maxPress
     };
     response.render("station", viewData);
   },

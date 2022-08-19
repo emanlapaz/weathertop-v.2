@@ -8,13 +8,31 @@
       "longitude": -7.15244,
       "readings": [
         {
-          "id": "03",
-          "date": "2021-04-25T07:20:42.138Z",
-          "code": 600,
-          "temperature": 6,
-          "windSpeed": 2,
-          "pressure": 1004,
-          "windDirection": 96
+          "id": "d9aecef0-1f45-11ed-a99f-bfc263d151bc",
+          "date": "2022-08-18T22:33:39.433Z",
+          "code": "100",
+          "temperature": 12,
+          "windSpeed": 12,
+          "windDirection": 12,
+          "pressure": 12
+        },
+        {
+          "id": "dfcc3520-1f45-11ed-a99f-bfc263d151bc",
+          "date": "2022-08-18T22:33:58.378Z",
+          "code": "",
+          "temperature": 1,
+          "windSpeed": 1,
+          "windDirection": 0,
+          "pressure": 1
+        },
+        {
+          "id": "18991770-1f59-11ed-b1c2-3ba80a965b74",
+          "date": "2022-08-19T00:51:28.276Z",
+          "code": "100",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
         }
       ]
     },
@@ -88,137 +106,20 @@
       "readings": []
     },
     {
-      "id": "1b5eaf30-1abb-11ed-bded-f16e3863cdba",
+      "id": "3fbc0040-1eb6-11ed-8a2c-eb7acfff90f8",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "stationName": "naas",
-      "latitude": "",
-      "longitude": "",
-      "readings": [
-        {
-          "id": "ae382dc0-1d06-11ed-9262-97b53d21c032",
-          "date": "2022-08-16T01:55:37.083Z",
-          "code": "",
-          "temperature": 100,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "b1ff47e0-1d06-11ed-9262-97b53d21c032",
-          "date": "2022-08-16T01:56:46.388Z",
-          "code": "",
-          "temperature": 1,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "b4cc98b0-1d06-11ed-9262-97b53d21c032",
-          "date": "2022-08-16T01:56:51.175Z",
-          "code": "",
-          "temperature": 12,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        }
-      ]
-    },
-    {
-      "id": "2df281b0-1c5c-11ed-ad3c-276b33cf4fb9",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "stationName": "",
       "latitude": "",
       "longitude": "",
       "readings": []
     },
     {
-      "id": "24cb8960-1c7a-11ed-b21a-ebd8bfdffe86",
+      "id": "786d8130-1f5f-11ed-8bce-b105d0be6017",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "stationName": "",
       "latitude": "",
       "longitude": "",
-      "readings": [
-        {
-          "id": "7c13c9b0-1cea-11ed-822b-bdf67470e6d0",
-          "date": "",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "7d6cca00-1cea-11ed-822b-bdf67470e6d0",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "a92df600-1cea-11ed-ac45-d3cb5b8d9a3d",
-          "date": "Mon",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "ac9d0510-1cea-11ed-ac45-d3cb5b8d9a3d",
-          "date": "Mon",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        }
-      ]
-    },
-    {
-      "id": "a4e7c730-1cf2-11ed-a749-6f6b8b0d2972",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "stationName": "",
-      "latitude": "",
-      "longitude": "",
-      "readings": [
-        {
-          "id": "a964c3d0-1cf2-11ed-a749-6f6b8b0d2972",
-          "date": "2022-08-15T23:33:22.858Z",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "b18d6350-1cf2-11ed-a749-6f6b8b0d2972",
-          "date": "2022-08-15T23:33:26.806Z",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "da7aaed0-1cf2-11ed-a749-6f6b8b0d2972",
-          "date": "2022-08-15T23:34:46.894Z",
-          "code": "",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        },
-        {
-          "id": "e5f31590-1cf2-11ed-a749-6f6b8b0d2972",
-          "date": "2022-08-15T23:34:49.158Z",
-          "code": "100",
-          "temperature": 0,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        }
-      ]
+      "readings": []
     }
   ]
 }

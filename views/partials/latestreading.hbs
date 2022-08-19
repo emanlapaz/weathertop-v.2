@@ -3,71 +3,71 @@
     <div style = "background:black"></div>
     <div class="content">
       <div class="header">
-        <h2>{{stationName}}{{station.stationName}}<div class="right floated ui icon">
-          <i class="large blue globe icon"></i>
-        </div></h2>
-        <h4>Lat:{{latitude}}{{station.latitude}} </h4>
-        <h4>Long:{{longitude}}{{station.longitude}}</h4>
+        <h3>{{stationName}}{{station.stationName}}<div class="floated ui icon">
+          <h1><i class="large blue globe icon"></i></h1>
+        </div></h3>
       </div>
-
+      <br>
+      <p>Lat:{{latitude}}{{station.latitude}} </p>
+       <p>Long:{{longitude}}{{station.longitude}}</p>
     </div>
   </div>
   <div class="card">
     <div class="content">
       <div class="header">
-        <h2>Weather
-          <h2>{{weatherCode}}</h2><div class="right floated ui icon">
-          <i class="{{weatherIcon}}"></i>
-        </div></h2>
+        <h3>Weather
+          <div class="floated ui icon">
+          <h1><i class="{{weatherIcon}}"></i></h1>
+        </div></h3>
       </div>
-      <p>getWeatherCodes</p>
-      <p>icons</p>
+      <br>
+      <p>{{weatherCode}}</p>
     </div>
   </div>
   <div class="card">
     <div class="content">
       <div class="header">
-        <h2>Temp<div class="right floated ui icon">
-          <i class="large red temperature low icon"></i>
-        </div></h2>
-        <h2> <div class="right floated ui icon">
-          <i class="{{trendTemp}}"></i></div></h2>
+        <h3>Temperature<div class="floated ui icon">
+          <h1><i class="large red temperature low icon"></i>
+            <h1> <div class="floated ui icon">
+              <i class="{{trendTemp}}"></i></div></h1>
+        </div></h3>
       </div>
-      <p>{{latestReading.temperature}}° C</p>
-      <p>{{fahrenheit}}° F</p>
+      <p>Temp: {{latestReading.temperature}}° C /{{fahrenheit}}° F</p>
+      <p></p>
       <p>MinTemp: {{minTemp}} ° C</p>
-      <p>MaxTemp ° C</p>
+      <p>MaxTemp {{maxTemp}}° C</p>
     </div>
   </div>
   <div class="card">
     <div class="content">
       <div class="header">
-        <h2> Wind <div class="right floated ui icon">
-          <i class="large green wind icon"></i>
-          <h2>  <div class="right floated ui icon">
-            <i class="{{trendWind}}"></i></div></h2>
-        </div></h2>
+        <h3> Wind <div class="floated ui icon">
+          <h1><i class="large green wind icon"></i></h1>
+          <h1>  <div class="floated ui icon">
+            <i class="{{trendWind}}"></i></div></h1>
+        </div></h3>
       </div>
-      <p> Beaufort:{{beaufortReading}}</p>
+      <p> Beaufort: {{beaufortReading}}</p>
       <p> {{beaufortLabel}}</p>
-      <p> Wind Compass: {{windCompass}}</p>
+      <p> Wind Direction: {{windCompass}}</p>
       <p> Feels like: {{windChill}}° C</p>
-      <p>min:windSpeed km/hr</p>
-      <p>max:windSpeed km/hr</p>
+      <p>min:{{minWind}}km/hr</p>
+      <p>max:{{maxWind}} km/hr</p>
     </div>
   </div>
   <div class="card">
     <div class="content">
       <div class="header">
-        <h2>Pressure <div class="right floated ui icon">
-          <i class="large yellow compress arrows alternate icon"></i>
-          <h2>  <div class="right floated ui icon">
-            <i class="{{trendPress}}"></i></div></h2>
-        </div></h2>
+        <h3>Pressure <div class="floated ui icon">
+          <h1><i class="large yellow compress arrows alternate icon"></i></h1>
+          <h1><div class="floated ui icon">
+            <i class="{{trendPress}}"></i></div></h1>
+        </div></h3>
       </div>
-      <p>{{latestReading.pressure}}hpa</p>
-      <p>min: hpa</p>
-      <p>max: hpa</p>
+      <p>Pressure:{{latestReading.pressure}}hpa</p>
+      <p>min: {{minPress}} hpa</p>
+      <p>max: {{maxPress}}hpa</p>
     </div>
   </div>
 </div>

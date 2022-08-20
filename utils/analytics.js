@@ -1,10 +1,10 @@
 "use strict";
-
-const { map } = require("lodash/collection");
 const { value } = require("lodash/seq");
-const { values } = require("lodash/object");
-
+const stationStore = require("../models/station-store");
 const analytics = {
+
+
+
 
   getLatestReading(station) {
     let latestReading = null;
@@ -44,6 +44,7 @@ const analytics = {
     }
     return minTemp
   },
+
 
   getMinWind(readings) {
     let minWind = readings[0]?.windSpeed;

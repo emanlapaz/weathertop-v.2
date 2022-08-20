@@ -13,6 +13,16 @@ const stationStore = {
     return this.store.findAll(this.collection);
   },
 
+  /*getSortedStation(stations){
+    let sortStation= stations.stationName;
+    for (let station of stations) {
+      sortStation.sort(function(a, b) {
+        return a.length - b.length;
+      });
+    }
+    return sortStation;
+  },*/
+
   getStation(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
@@ -23,7 +33,6 @@ const stationStore = {
 
   addStations(station) {
     this.store.add(this.collection, station);
-    //station.name.push(name);
     this.store.save();
   },
 

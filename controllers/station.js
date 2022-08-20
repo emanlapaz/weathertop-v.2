@@ -58,7 +58,7 @@ const station = {
       minPress: minPress,
       maxTemp: maxTemp,
       maxWind: maxWind,
-      maxPress: maxPress
+      maxPress: maxPress,
     };
     response.render("station", viewData);
   },

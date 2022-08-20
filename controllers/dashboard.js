@@ -9,9 +9,11 @@ const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
+    //const sortedStation= stationStore.getSortedStation();
     const viewData = {
       title: "Station Dashboard",
-      stations: stationStore.getUserStations(loggedInUser.id)
+      stations: stationStore.getUserStations(loggedInUser.id),
+      //sortedStation: sortedStation
     };
     logger.info("about to render", stationStore.getAllStations());
     response.render("dashboard", viewData);

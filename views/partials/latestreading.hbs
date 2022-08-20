@@ -1,6 +1,5 @@
 <div class="ui five column red cards">
   <div class=" card">
-    <div style = "background:black"></div>
     <div class="content">
       <div class="header">
         <h3>{{stationName}}{{station.stationName}}<div class="floated ui icon">
@@ -15,8 +14,7 @@
   <div class="card">
     <div class="content">
       <div class="header">
-        <h3>Weather
-          <div class="floated ui icon">
+        <h3>Weather<div class="floated ui icon">
           <h1><i class="{{weatherIcon}}"></i></h1>
         </div></h3>
       </div>
@@ -42,11 +40,10 @@
   <div class="card">
     <div class="content">
       <div class="header">
-        <h3> Wind <div class="floated ui icon">
-          <h1><i class="large green wind icon"></i></h1>
-          <h1>  <div class="floated ui icon">
-            <i class="{{trendWind}}"></i></div></h1>
-        </div></h3>
+        <h3> Wind</h3>
+        <div class="floated ui icon"><h1><i class="large green wind icon"></i></h1>
+          <h1><div class="floated ui icon"><i class="{{trendWind}}"></i></div></h1>
+        </div>
       </div>
       <p> Beaufort: {{beaufortReading}}</p>
       <p> {{beaufortLabel}}</p>

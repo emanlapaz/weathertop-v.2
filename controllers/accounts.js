@@ -3,6 +3,7 @@
 const userstore = require("../models/user-store");
 const logger = require("../utils/logger");
 const uuid = require("uuid");
+const stationStore = require("../models/station-store");
 
 const accounts = {
   index(request, response) {
@@ -38,6 +39,20 @@ const accounts = {
     logger.info(`registering ${user.email}`);
     response.redirect("/");
   },
+
+  /*update(request, response){
+    const user= request.body;
+    user.id = uuid.v1();
+    userstore.updateUser(user);
+    const newUser = {
+      firstName: request.body.firstName,
+      lastName: request.body.lastName,
+      email: request.body.email,
+      password: request.body.password,
+    }
+    logger.info('updating ${user.email}');
+    response.redirect("edit");
+  },*/
 
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);

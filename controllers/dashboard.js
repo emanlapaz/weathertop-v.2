@@ -1,19 +1,19 @@
 "use strict";
-
+const axios = require("axios");
 const accounts = require("./accounts.js");
 const logger = require("../utils/logger");
 const stationStore = require("../models/station-store");
 const uuid = require("uuid");
+const analytics = require("../utils/analytics");
 
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
-    //const sortedStation= stationStore.getSortedStation();
+
     const viewData = {
       title: "Station Dashboard",
       stations: stationStore.getUserStations(loggedInUser.id),
-      //sortedStation: sortedStation
     };
     logger.info("about to render", stationStore.getAllStations());
     response.render("dashboard", viewData);
@@ -40,6 +40,6 @@ const dashboard = {
     stationStore.addStations(newStationList);
     response.redirect("/dashboard");
   }
-};
+}
 
 module.exports = dashboard;

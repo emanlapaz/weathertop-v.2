@@ -3,9 +3,6 @@ const { value } = require("lodash/seq");
 const stationStore = require("../models/station-store");
 const analytics = {
 
-
-
-
   getLatestReading(station) {
     let latestReading = null;
     if (station.readings.length > 0) {
@@ -44,7 +41,6 @@ const analytics = {
     }
     return minTemp
   },
-
 
   getMinWind(readings) {
     let minWind = readings[0]?.windSpeed;

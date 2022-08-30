@@ -7,5 +7,17 @@
     <h1>Weather Top Stations</h1></div>
   <h4>Welcome {{firstName}} {{lastName}}</h4>
 </section>
-  {{>liststations}}
+</div>
+{{#each stations}}
+    <section class="ui stacked segment">
+      <h1></h1>
+      {{>latestreading}}
+      <a href="/station/{{id}}" class="ui icon button">
+        <i class="icon blue folder open"></i>
+      </a>
+      <a href="/dashboard/deletestation/{{id}}" class="ui icon button">
+        <i class="icon red trash"></i>
+      </a>
+    </section>
+{{/each}}
   {{> addstations}}

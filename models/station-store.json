@@ -1,40 +1,28 @@
 {
   "stationCollection": [
     {
-      "id": "01",
-      "stationName": "Tramore",
+      "id": "d82a1ee0-2805-11ed-9689-fbe1ec5bb179",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "latitude": 52.16235,
-      "longitude": -7.15244,
-      "readings": [
-        {
-          "id": "d9aecef0-1f45-11ed-a99f-bfc263d151bc",
-          "date": "2022-08-18T22:33:39.433Z",
-          "code": "100",
-          "temperature": 12,
-          "windSpeed": 12,
-          "windDirection": 12,
-          "pressure": 12
-        },
-        {
-          "id": "dfcc3520-1f45-11ed-a99f-bfc263d151bc",
-          "date": "2022-08-18T22:33:58.378Z",
-          "code": "",
-          "temperature": 1,
-          "windSpeed": 1,
-          "windDirection": 0,
-          "pressure": 1
-        },
-        {
-          "id": "4718e690-2812-11ed-83b6-e3d4bdf81a57",
-          "date": "2022-08-30T03:17:23.579Z",
-          "code": "",
-          "temperature": 12,
-          "windSpeed": 0,
-          "windDirection": 0,
-          "pressure": 0
-        }
-      ]
+      "stationName": "Ashbourne",
+      "latitude": "",
+      "longitude": "",
+      "readings": []
+    },
+    {
+      "id": "feca4c00-19e1-11ed-b844-a9a630ffcfd6",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "stationName": "Carlow",
+      "latitude": "",
+      "longitude": "",
+      "readings": []
+    },
+    {
+      "id": "c71ff610-19e1-11ed-b844-a9a630ffcfd6",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "stationName": "Dublin",
+      "latitude": "12",
+      "longitude": "12",
+      "readings": []
     },
     {
       "id": "05",
@@ -82,30 +70,6 @@
       ]
     },
     {
-      "id": "b1d88840-19e0-11ed-b727-33bbed36e263",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "stationName": "newbridge",
-      "latitude": "12.21",
-      "longitude": "12.34",
-      "readings": []
-    },
-    {
-      "id": "c71ff610-19e1-11ed-b844-a9a630ffcfd6",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "stationName": "Dublin",
-      "latitude": "12",
-      "longitude": "12",
-      "readings": []
-    },
-    {
-      "id": "feca4c00-19e1-11ed-b844-a9a630ffcfd6",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "stationName": "Carlow",
-      "latitude": "",
-      "longitude": "",
-      "readings": []
-    },
-    {
       "id": "3fbc0040-1eb6-11ed-8a2c-eb7acfff90f8",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "stationName": "naas",
@@ -124,12 +88,48 @@
       ]
     },
     {
-      "id": "d82a1ee0-2805-11ed-9689-fbe1ec5bb179",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "stationName": "Ashbourne",
-      "latitude": "",
-      "longitude": "",
+      "id": "b1d88840-19e0-11ed-b727-33bbed36e263",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "stationName": "newbridge",
+      "latitude": "12.21",
+      "longitude": "12.34",
       "readings": []
+    },
+    {
+      "id": "01",
+      "stationName": "Tramore",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "latitude": 52.16235,
+      "longitude": -7.15244,
+      "readings": [
+        {
+          "id": "d9aecef0-1f45-11ed-a99f-bfc263d151bc",
+          "date": "2022-08-18T22:33:39.433Z",
+          "code": "100",
+          "temperature": 12,
+          "windSpeed": 12,
+          "windDirection": 12,
+          "pressure": 12
+        },
+        {
+          "id": "5c613720-28b5-11ed-ac59-41367524ffcb",
+          "date": "2022-08-30T22:44:38.808Z",
+          "code": "100",
+          "temperature": 12,
+          "windSpeed": 12,
+          "windDirection": 100,
+          "pressure": 1001
+        },
+        {
+          "id": "6637d4c0-28b5-11ed-ac59-41367524ffcb",
+          "date": "2022-08-30T22:44:58.756Z",
+          "code": "800",
+          "temperature": 11,
+          "windSpeed": 4,
+          "windDirection": 12,
+          "pressure": 1111
+        }
+      ]
     }
   ]
 }

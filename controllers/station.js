@@ -40,7 +40,7 @@ const station = {
     const viewData = {
       name: "Station",
       station: stationStore.getStation(stationId),
-      latestReading:latestReading,
+      latestReading: latestReading,
       lastTwoReading: lastTwoReading,
       lastThreeReading: lastThreeReading,
       fahrenheit: fahrenheit,

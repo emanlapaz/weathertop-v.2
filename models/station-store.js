@@ -13,16 +13,6 @@ const stationStore = {
     return this.store.findAll(this.collection);
   },
 
-  /*getSortedStation(stations){
-    let sortStation= stations.stationName;
-    for (let station of stations) {
-      sortStation.sort(function(a, b) {
-        return a.length - b.length;
-      });
-    }
-    return sortStation;
-  },*/
-
   getStation(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
@@ -48,10 +38,23 @@ const stationStore = {
     this.store.save();
   },
 
+  addReport(id, reading) {
+    const station = this.getStation(id);
+    station.readings.push(reading);
+    this.store.save();
+  },
+
   removeReading(id, readingId) {
     const station = this.getStation(id);
     const readings = station.readings;
     _.remove(readings, { id: readingId });
+    this.store.save();
+  },
+
+  removeReport(id, readingId) {
+    const station = this.getStation(id);
+    const reports = station.readings;
+    _.remove(reports, { id: readingId });
     this.store.save();
   },
 
@@ -69,7 +72,8 @@ const stationStore = {
     reading.windDirection = updatedReading.windDirection;
     reading.pressure = updatedReading.pressure;
     this.store.save();
-  }
+  },
+
 };
 
 module.exports = stationStore;

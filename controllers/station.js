@@ -9,6 +9,7 @@ const { contentDisposition } = require("express/lib/utils");
 const reading = require("../controllers/reading");
 const { value } = require("lodash/seq");
 const axios = require("axios");
+const callWeather='https://api.openweathermap.org/data/2.5/weather?lat=53.34&lon=-6.26&units=metric&appid=dae60561bd4c79fffdaa062810f637ec';
 
 
 const station = {
@@ -70,6 +71,7 @@ const station = {
     logger.debug(`Deleting Reading ${readingId} from Station ${stationId}`);
     stationStore.removeReading(stationId, readingId);
     response.redirect("/station/" + stationId);
+
   },
 
   addReading(request, response) {
@@ -88,38 +90,35 @@ const station = {
     stationStore.addReading(stationId, newReading);
     response.redirect("/station/" + stationId);
   },
+
   async addReport(request, response) {
-    logger.info("rendering new report");
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
     let report = {};
-    const lat = request.body.latitude;
-    const lng = request.body.longitude;
-    const requestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=52.160858&lon=-7.152420&units=metric&appid=dae60561bd4c79fffdaa062810f637ec`;
-    const result = await axios.get(requestUrl);
+    const result = await axios.get(callWeather)
     if (result.status == 200) {
-      const reading = result.data.current;
-      report.code = reading?.weather[0].id;
-      report.temperature = reading?.temp;
-      report.windSpeed = reading?.wind_speed;
-      report.pressure = reading?.pressure;
-      report.windDirection = reading?.windDirection;
-      //report.tempTrend = [];
-      //report.trendLabels = [];
-      //const trends = result.data.daily;
-      //for (let i=0; i<trends.length; i++) {
-      // report.tempTrend.push(trends[i].temp.day);
-      // const date = new Date(trends[i].dt * 1000);
-      // console.log(date);
-      //report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
-      // }
+      id: uuid.v1()
+      const reading = result.data;
+      report.date=  analytics?.getTimeStamp();
+      report.code = reading?.cod;
+      report.temperature = reading?.main.temp;
+      report.windSpeed = reading?.wind.speed;
+      report.pressure = reading?.main.pressure;
+      report.windDirection = reading?.wind.deg;
     }
-    const viewData = {
-      title: "Weather Report",
-      reading: report
-    };
-    response.redirect("/station/" + stationId, viewData);
+
+    logger.info("rendering new report");
+    stationStore.addReport(stationId, report);
+    response.redirect("/station/" + stationId);
+
+    //const viewData = {
+     // title: "Weather Report",
+     // reading: report
+   // };
+   // response.render("station", viewData)
   }
-};
+}
+
+
 
 module.exports = station;

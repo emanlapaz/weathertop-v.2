@@ -5,7 +5,7 @@ const analytics = {
 
   getLatestReading(station) {
     let latestReading = null;
-    if (station.readings.length > 0) {
+    if (station?.readings.length > 0) {
       latestReading = station.readings.slice(-1)[0];
     }
     return latestReading;
@@ -117,6 +117,7 @@ const analytics = {
       weatherIcon.set("800", "large violet bolt icon")
     return weatherIcon;
   },
+  
 
   getWindChill(temperature, windSpeed) {
     let windChill = null;

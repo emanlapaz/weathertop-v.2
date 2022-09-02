@@ -6,12 +6,13 @@ const stationStore = require("../models/station-store");
 const uuid = require("uuid");
 const analytics = require("../utils/analytics");
 const reading = require("../controllers/reading");
+const { runInContext: L } = require("lodash");
 
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
-    const stations = stationStore.getAllStations()
+    const stations = stationStore.getUserStations(loggedInUser.id)
     stations.sort((a, b) => {
       const nameA = a.stationName.toUpperCase(); // ignore upper and lowercase
       const nameB = b.stationName.toUpperCase(); // ignore upper and lowercase
@@ -23,16 +24,36 @@ const dashboard = {
       }
       return 0;
     });
-    for(let station of stations){
-      let latestReading;
-      station.latestReading=latestReading;
+
+    const latestReading =null;
+    for(let station of stations) {
+      station.latestReading = analytics.getLatestReading(station)
+      station.lastTwoReading = analytics?.getLastTwoReading(station);
+      station.lastThreeReading = analytics?.getLastThreeReading(station);
+      station.fahrenheit = analytics?.getFahrenheit(station.latestReading?.temperature);
+      station.weatherCode = analytics?.getWeatherCode(latestReading?.code);
+      station.weatherIcon = analytics?.getWeatherIcon(latestReading?.code);
+      station.windChill = analytics?.getWindChill(station.latestReading?.temperature, station.latestReading?.windSpeed);
+      station.beaufortReading = analytics?.getBeaufortReading(station.latestReading?.windSpeed);
+      station.beaufortLabel = analytics?.getBeaufortlabel(station.beaufortLabel);
+      station.windCompass = analytics?.getWindCompass(station.latestReading?.windDirection);
+      station.trendWind = analytics?.getTrendWind(station.latestReading?.windSpeed, station.lastTwoReading?.windSpeed, station.lastThreeReading?.windSpeed);
+      station.trendTemp = analytics?.getTrendTemp(station.latestReading?.temperature, station.lastTwoReading?.temperature, station.lastThreeReading?.temperature);
+      station.trendPress = analytics?.getTrendPress(station.latestReading?.pressure, station.lastTwoReading?.pressure, station.lastThreeReading?.pressure);
+      station.minTemp = analytics?.getMinTemp(station.readings);
+      station.minWind = analytics?.getMinWind(station.readings);
+      station.minPress = analytics?.getMinPress(station.readings);
+      station.maxTemp = analytics?.getMaxTemp(station.readings);
+      station.maxWind = analytics?.getMaxWind(station.readings);
+      station.maxPress = analytics?.getMaxPress(station.readings);
+
     }
-    const viewData = {
-      title: "Station Dashboard",
-      stations: stationStore.getUserStations(loggedInUser.id),
-    };
-    logger.info("about to render", stationStore.getAllStations());
-    response.render("dashboard" ,viewData);
+      const viewData = {
+        title: "Station Dashboard",
+        stations: stations
+      };
+      logger.info("about to render", stationStore.getAllStations());
+      response.render("dashboard", viewData);
   },
 
   deleteStations(request, response) {

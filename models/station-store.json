@@ -110,9 +110,35 @@
           "windSpeed": 2.57,
           "pressure": 1018,
           "windDirection": 360
+        },
+        {
+          "id": "d0f04bd0-2c9d-11ed-bf26-f3878cb27921",
+          "date": "2022-09-04T22:06:16.591Z",
+          "code": "100",
+          "temperature": 0,
+          "windSpeed": 0,
+          "windDirection": 0,
+          "pressure": 0
         }
       ],
       "latestReading": {
+        "id": "d0f04bd0-2c9d-11ed-bf26-f3878cb27921",
+        "date": "2022-09-04T22:06:16.591Z",
+        "code": "100",
+        "temperature": 0,
+        "windSpeed": 0,
+        "windDirection": 0,
+        "pressure": 0
+      },
+      "lastTwoReading": {
+        "date": "2022-09-02T01:30:05.793Z",
+        "code": 200,
+        "temperature": 15.06,
+        "windSpeed": 2.57,
+        "pressure": 1018,
+        "windDirection": 360
+      },
+      "lastThreeReading": {
         "id": "6637d4c0-28b5-11ed-ac59-41367524ffcb",
         "date": "2022-08-30T22:44:58.756Z",
         "code": "800",
@@ -121,410 +147,102 @@
         "windDirection": 12,
         "pressure": 1111
       },
-      "lastTwoReading": {
-        "id": "5c613720-28b5-11ed-ac59-41367524ffcb",
-        "date": "2022-08-30T22:44:38.808Z",
-        "code": "100",
-        "temperature": 12,
-        "windSpeed": 12,
-        "windDirection": 100,
-        "pressure": 1001
-      },
-      "lastThreeReading": {
-        "id": "d9aecef0-1f45-11ed-a99f-bfc263d151bc",
-        "date": "2022-08-18T22:33:39.433Z",
-        "code": "100",
-        "temperature": 12,
-        "windSpeed": 12,
-        "windDirection": 12,
-        "pressure": 12
-      },
-      "fahrenheit": "51.8",
-      "weatherCode": {},
-      "weatherIcon": {},
-      "windChill": "11.2",
-      "beaufortReading": 1,
-      "beaufortLabel": null,
-      "windCompass": "north northeast",
-      "trendWind": null,
-      "trendTemp": null,
-      "trendPress": "red arrow alternate circle up icon",
-      "minTemp": 11,
-      "minWind": 4,
-      "minPress": 12,
-      "maxTemp": 12,
-      "maxWind": 12,
-      "maxPress": 1111
-    },
-    {
-      "id": "4c4a7d10-2a4a-11ed-9477-537092ed6ab3",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "stationName": "Naas",
-      "latitude": "53.220565",
-      "longitude": "-6.659308",
-      "readings": [
-        {
-          "id": "43710eb0-2a4b-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:09:58.809Z",
-          "code": "100",
-          "temperature": 18,
-          "windSpeed": 12,
-          "windDirection": 100,
-          "pressure": 1001
-        },
-        {
-          "id": "4a5baff0-2a4b-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:10:26.080Z",
-          "code": "800",
-          "temperature": 1,
-          "windSpeed": 12,
-          "windDirection": 12,
-          "pressure": 1003
-        },
-        {
-          "id": "55683580-2a4b-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:10:37.684Z",
-          "code": "700",
-          "temperature": 4,
-          "windSpeed": 18,
-          "windDirection": 2,
-          "pressure": 1006
-        },
-        {
-          "id": "644a0600-2a4b-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:10:56.220Z",
-          "code": "400",
-          "temperature": 11,
-          "windSpeed": 20,
-          "windDirection": 123,
-          "pressure": 1111
-        }
-      ],
-      "latestReading": {
-        "id": "644a0600-2a4b-11ed-ae2d-d90f33c7e1b6",
-        "date": "2022-09-01T23:10:56.220Z",
-        "code": "400",
-        "temperature": 11,
-        "windSpeed": 20,
-        "windDirection": 123,
-        "pressure": 1111
-      },
-      "lastTwoReading": {
-        "id": "55683580-2a4b-11ed-ae2d-d90f33c7e1b6",
-        "date": "2022-09-01T23:10:37.684Z",
-        "code": "700",
-        "temperature": 4,
-        "windSpeed": 18,
-        "windDirection": 2,
-        "pressure": 1006
-      },
-      "lastThreeReading": {
-        "id": "4a5baff0-2a4b-11ed-ae2d-d90f33c7e1b6",
-        "date": "2022-09-01T23:10:26.080Z",
-        "code": "800",
-        "temperature": 1,
-        "windSpeed": 12,
-        "windDirection": 12,
-        "pressure": 1003
-      },
-      "fahrenheit": "51.8",
-      "weatherCode": {},
-      "weatherIcon": {},
-      "windChill": "8.6",
-      "beaufortReading": null,
-      "beaufortLabel": null,
-      "windCompass": "east southeast",
-      "trendWind": "red arrow alternate circle up icon",
-      "trendTemp": "red arrow alternate circle up icon",
-      "trendPress": "red arrow alternate circle up icon",
-      "minTemp": 1,
-      "minWind": 12,
-      "minPress": 1001,
-      "maxTemp": 18,
-      "maxWind": 20,
-      "maxPress": 1111
-    },
-    {
-      "id": "90867c80-2a4b-11ed-ae2d-d90f33c7e1b6",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "stationName": "Dublin",
-      "latitude": "53.34",
-      "longitude": "-6.26",
-      "readings": [
-        {
-          "id": "16c89a80-2a4c-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:16:04.894Z",
-          "code": "200",
-          "temperature": 1,
-          "windSpeed": 12,
-          "windDirection": 150,
-          "pressure": 1001
-        },
-        {
-          "id": "2731f560-2a4c-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:16:20.653Z",
-          "code": "300",
-          "temperature": 4,
-          "windSpeed": 10,
-          "windDirection": 80,
-          "pressure": 1002
-        },
-        {
-          "id": "30d28ee0-2a4c-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:16:48.185Z",
-          "code": "700",
-          "temperature": 12,
-          "windSpeed": 4,
-          "windDirection": 12,
-          "pressure": 1001
-        }
-      ],
-      "latestReading": {
-        "id": "30d28ee0-2a4c-11ed-ae2d-d90f33c7e1b6",
-        "date": "2022-09-01T23:16:48.185Z",
-        "code": "700",
-        "temperature": 12,
-        "windSpeed": 4,
-        "windDirection": 12,
-        "pressure": 1001
-      },
-      "lastTwoReading": {
-        "id": "2731f560-2a4c-11ed-ae2d-d90f33c7e1b6",
-        "date": "2022-09-01T23:16:20.653Z",
-        "code": "300",
-        "temperature": 4,
-        "windSpeed": 10,
-        "windDirection": 80,
-        "pressure": 1002
-      },
-      "lastThreeReading": {
-        "id": "16c89a80-2a4c-11ed-ae2d-d90f33c7e1b6",
-        "date": "2022-09-01T23:16:04.894Z",
-        "code": "200",
-        "temperature": 1,
-        "windSpeed": 12,
-        "windDirection": 150,
-        "pressure": 1001
-      },
-      "fahrenheit": "53.6",
-      "weatherCode": {},
-      "weatherIcon": {},
-      "windChill": "12.3",
-      "beaufortReading": 1,
-      "beaufortLabel": null,
-      "windCompass": "north northeast",
-      "trendWind": "blue arrow alternate circle down icon",
-      "trendTemp": "red arrow alternate circle up icon",
-      "trendPress": null,
-      "minTemp": 1,
-      "minWind": 4,
-      "minPress": 1001,
-      "maxTemp": 12,
-      "maxWind": 12,
-      "maxPress": 1002
-    },
-    {
-      "id": "c0ed62d0-2a4b-11ed-ae2d-d90f33c7e1b6",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "stationName": "Cork",
-      "latitude": "51.89",
-      "longitude": "-8.47",
-      "readings": [
-        {
-          "id": "d5a27120-2a4b-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:14:11.359Z",
-          "code": "100",
-          "temperature": 23,
-          "windSpeed": 28,
-          "windDirection": 1,
-          "pressure": 1111
-        },
-        {
-          "id": "e49cd2b0-2a4b-11ed-ae2d-d90f33c7e1b6",
-          "date": "2022-09-01T23:14:31.352Z",
-          "code": "500",
-          "temperature": 20,
-          "windSpeed": 29,
-          "windDirection": 100,
-          "pressure": 1121
-        },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {
-          "windSpeed": 1.54,
-          "windDirection": 0
-        },
-        {},
-        {
-          "windDirection": 0
-        },
-        {},
-        {
-          "windSpeed": 1.54,
-          "windDirection": 0
-        },
-        {
-          "windSpeed": 1.54,
-          "windDirection": 0
-        },
-        {
-          "temperature": 15.04,
-          "windSpeed": 1.54,
-          "windDirection": 0
-        },
-        {
-          "code": 200,
-          "temperature": 15.04,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "code": 200,
-          "temperature": 15.04,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "code": 200,
-          "temperature": 15.04,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "code": 200,
-          "temperature": 15.04,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "code": 200,
-          "temperature": 15.04,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "code": 200,
-          "temperature": 15.04,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": 1662079100,
-          "code": 200,
-          "temperature": 15.02,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": "2022-09-02T00:39:41.547Z",
-          "code": 200,
-          "temperature": 15.02,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": "2022-09-02T00:42:00.137Z",
-          "code": 200,
-          "weatherCode": {},
-          "weatherIcon": {},
-          "temperature": 15.02,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": "2022-09-02T00:44:18.162Z",
-          "code": 200,
-          "temperature": 15.02,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": "2022-09-02T00:46:13.976Z",
-          "code": {},
-          "temperature": 14.98,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": "2022-09-02T00:46:51.082Z",
-          "code": {},
-          "temperature": 14.98,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": "2022-09-02T00:54:10.299Z",
-          "code": 200,
-          "temperature": 15.09,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        },
-        {
-          "date": "2022-09-02T00:59:29.602Z",
-          "code": 200,
-          "temperature": 15.05,
-          "windSpeed": 1.54,
-          "pressure": 1018,
-          "windDirection": 0
-        }
-      ],
-      "latestReading": {
-        "date": "2022-09-02T00:59:29.602Z",
-        "code": 200,
-        "temperature": 15.05,
-        "windSpeed": 1.54,
-        "pressure": 1018,
-        "windDirection": 0
-      },
-      "lastTwoReading": {
-        "date": "2022-09-02T00:54:10.299Z",
-        "code": 200,
-        "temperature": 15.09,
-        "windSpeed": 1.54,
-        "pressure": 1018,
-        "windDirection": 0
-      },
-      "lastThreeReading": {
-        "date": "2022-09-02T00:46:51.082Z",
-        "code": {},
-        "temperature": 14.98,
-        "windSpeed": 1.54,
-        "pressure": 1018,
-        "windDirection": 0
-      },
-      "fahrenheit": "59.1",
-      "weatherCode": {},
-      "weatherIcon": {},
-      "windChill": "16.7",
-      "beaufortReading": 1,
+      "fahrenheit": "32.0",
+      "windChill": "13.1",
+      "beaufortReading": 0,
       "beaufortLabel": null,
       "windCompass": "north",
+      "trendWind": "blue arrow alternate circle down icon",
+      "trendTemp": null,
+      "trendPress": "blue arrow alternate circle down icon",
+      "minTemp": 0,
+      "minWind": 0,
+      "minPress": 0,
+      "maxTemp": 15.06,
+      "maxWind": 12,
+      "maxPress": 1111,
+      "weatherCode": "Clear",
+      "weatherIcon": "large orange sun icon"
+    },
+    {
+      "id": "6727d5c0-2cb5-11ed-b0f4-8fb53b26e7d6",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationName": "Anchorage",
+      "latitude": "61.21",
+      "longitude": "-149.9",
+      "readings": [
+        {
+          "id": "6ce36ce0-2cb5-11ed-b0f4-8fb53b26e7d6",
+          "date": "2022-09-05T00:55:24.708Z",
+          "code": "200",
+          "temperature": 14.68,
+          "windSpeed": 3.6,
+          "pressure": 1007,
+          "windDirection": 310
+        }
+      ],
+      "latestReading": {
+        "id": "6ce36ce0-2cb5-11ed-b0f4-8fb53b26e7d6",
+        "date": "2022-09-05T00:55:24.708Z",
+        "code": "200",
+        "temperature": 14.68,
+        "windSpeed": 3.6,
+        "pressure": 1007,
+        "windDirection": 310
+      },
+      "lastTwoReading": {
+        "id": "6ce36ce0-2cb5-11ed-b0f4-8fb53b26e7d6",
+        "date": "2022-09-05T00:55:24.708Z",
+        "code": "200",
+        "temperature": 14.68,
+        "windSpeed": 3.6,
+        "pressure": 1007,
+        "windDirection": 310
+      },
+      "lastThreeReading": {
+        "id": "6ce36ce0-2cb5-11ed-b0f4-8fb53b26e7d6",
+        "date": "2022-09-05T00:55:24.708Z",
+        "code": "200",
+        "temperature": 14.68,
+        "windSpeed": 3.6,
+        "pressure": 1007,
+        "windDirection": 310
+      },
+      "fahrenheit": "58.4",
+      "weatherCode": "Partial Clouds",
+      "weatherIcon": "large orange cloud sun icon",
+      "windChill": "15.4",
+      "beaufortReading": 1,
+      "beaufortLabel": null,
+      "windCompass": "northwest",
       "trendWind": null,
       "trendTemp": null,
       "trendPress": null,
-      "minTemp": 14.98,
-      "minWind": 1.54,
-      "minPress": 1018,
-      "maxTemp": 23,
-      "maxWind": 29,
-      "maxPress": 1121
+      "minTemp": 14.68,
+      "minWind": 3.6,
+      "minPress": 1007,
+      "maxTemp": 14.68,
+      "maxWind": 3.6,
+      "maxPress": 1007
+    },
+    {
+      "id": "d9110f30-2cb5-11ed-9046-11436f641621",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationName": "Manila",
+      "latitude": "14.60",
+      "longitude": "120.58",
+      "readings": [],
+      "latestReading": null,
+      "lastTwoReading": null,
+      "lastThreeReading": null,
+      "fahrenheit": "NaN",
+      "windChill": "NaN",
+      "beaufortReading": null,
+      "beaufortLabel": null,
+      "windCompass": null,
+      "trendWind": null,
+      "trendTemp": null,
+      "trendPress": null
     }
   ]
 }

@@ -9,7 +9,8 @@ const { contentDisposition } = require("express/lib/utils");
 const reading = require("../controllers/reading");
 const { value } = require("lodash/seq");
 const axios = require("axios");
-const callWeather='https://api.openweathermap.org/data/2.5/weather?lat=53.34&lon=-6.26&units=metric&appid=dae60561bd4c79fffdaa062810f637ec';
+const { toString } = require("lodash");
+
 
 
 const station = {
@@ -45,8 +46,8 @@ const station = {
       lastTwoReading: lastTwoReading,
       lastThreeReading: lastThreeReading,
       fahrenheit: fahrenheit,
-      weatherCode: weatherCode?.get(latestReading?.code),
-      weatherIcon: weatherIcon?.get(latestReading?.code),
+      weatherCode: weatherCode,
+      weatherIcon: weatherIcon,
       windChill: windChill,
       beaufortReading: beaufortReading,
       beaufortLabel: beaufortLabel,
@@ -60,7 +61,7 @@ const station = {
       minPress: minPress,
       maxTemp: maxTemp,
       maxWind: maxWind,
-      maxPress: maxPress
+      maxPress: maxPress,
     };
     response.render("station", viewData);
   },
@@ -94,13 +95,17 @@ const station = {
   async addReport(request, response) {
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
-    let report = {};
+    let report = {
+      id: uuid.v1(),
+    };
+    const lat= request.body.latitude;
+    const lng=request.body.longitude;
+    const callWeather="https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=dae60561bd4c79fffdaa062810f637ec";
     const result = await axios.get(callWeather)
-    if (result.status == 200) {
-      id: uuid.v1()
+    if (result.status === 200) {
       const reading = result.data;
       report.date=  analytics?.getTimeStamp();
-      report.code = reading?.cod;
+      report.code = toString(reading?.cod);
       report.temperature = reading?.main.temp;
       report.windSpeed = reading?.wind.speed;
       report.pressure = reading?.main.pressure;
@@ -110,12 +115,6 @@ const station = {
     logger.info("rendering new report");
     stationStore.addReport(stationId, report);
     response.redirect("/station/" + stationId);
-
-    //const viewData = {
-     // title: "Weather Report",
-     // reading: report
-   // };
-   // response.render("station", viewData)
   }
 }
 

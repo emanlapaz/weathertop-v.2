@@ -92,7 +92,7 @@ const analytics = {
     return maxPress
   },
 
-  getWeatherCode() {
+  getWeatherCode(code) {
     let weatherCode = new Map();
     weatherCode.set("100", "Clear"),
       weatherCode.set("200", "Partial Clouds"),
@@ -102,10 +102,10 @@ const analytics = {
       weatherCode.set("600", "Rain"),
       weatherCode.set("700", "Snow"),
       weatherCode.set("800", "Thunder")
-    return weatherCode;
+    return weatherCode.get(code);
   },
 
-  getWeatherIcon() {
+  getWeatherIcon(code) {
     let weatherIcon = new Map();
     weatherIcon.set("100", "large orange sun icon"),
       weatherIcon.set("200", "large orange cloud sun icon"),
@@ -115,7 +115,7 @@ const analytics = {
       weatherIcon.set("600", "large grey cloud rain icon"),
       weatherIcon.set("700", "large blue snowflake icon"),
       weatherIcon.set("800", "large violet bolt icon")
-    return weatherIcon;
+    return weatherIcon.get(code);
   },
   
 

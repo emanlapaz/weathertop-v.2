@@ -7,6 +7,8 @@ const uuid = require("uuid");
 const analytics = require("../utils/analytics");
 const reading = require("../controllers/reading");
 const { runInContext: L } = require("lodash");
+const station = require("./station");
+const weatherCode = require("../utils/analytics");
 
 const dashboard = {
   index(request, response) {
@@ -25,14 +27,14 @@ const dashboard = {
       return 0;
     });
 
-    const latestReading =null;
+    const latestReading =station.latestReading;
     for(let station of stations) {
       station.latestReading = analytics.getLatestReading(station)
       station.lastTwoReading = analytics?.getLastTwoReading(station);
       station.lastThreeReading = analytics?.getLastThreeReading(station);
       station.fahrenheit = analytics?.getFahrenheit(station.latestReading?.temperature);
-      station.weatherCode = analytics?.getWeatherCode(latestReading?.code);
-      station.weatherIcon = analytics?.getWeatherIcon(latestReading?.code);
+      station.weatherCode = analytics?.getWeatherCode(station.latestReading?.code);
+      station.weatherIcon = analytics?.getWeatherIcon(station.latestReading?.code);
       station.windChill = analytics?.getWindChill(station.latestReading?.temperature, station.latestReading?.windSpeed);
       station.beaufortReading = analytics?.getBeaufortReading(station.latestReading?.windSpeed);
       station.beaufortLabel = analytics?.getBeaufortlabel(station.beaufortLabel);
@@ -50,7 +52,7 @@ const dashboard = {
     }
       const viewData = {
         title: "Station Dashboard",
-        stations: stations
+        stations: stations,
       };
       logger.info("about to render", stationStore.getAllStations());
       response.render("dashboard", viewData);

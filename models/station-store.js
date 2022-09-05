@@ -51,13 +51,6 @@ const stationStore = {
     this.store.save();
   },
 
-  removeReport(id, readingId) {
-    const station = this.getStation(id);
-    const reports = station.readings;
-    _.remove(reports, { id: readingId });
-    this.store.save();
-  },
-
   getReading(id, readingId) {
     const stationList = this.store.findOneBy(this.collection, { id: id });
     const readings = stationList.readings.filter(reading => reading.id == readingId);

@@ -39,3 +39,34 @@
     {{/each}}
   </tbody>
 </table>
+<h3>Trend Charts</h3>
+<div>
+  <script src="https://unpkg.com/frappe-charts@latest"></script>
+  <div class="ui segment" id="chart"></div>
+  <script>
+    const data = {
+      labels: [
+        {{#each reading.trendLabels}}
+          "{{this}}",
+        {{/each}}
+      ],
+      datasets: [
+        {
+          name: "Temperature", type: "line",
+          values: [
+            {{#each reading.tempTrend}}
+              {{this}},
+            {{/each}}
+          ]
+        }
+      ]
+    };
+    const chart= new frappe.Chart("#chart", {
+      title: "Temperature Trend",
+      data: data,
+      type: "line",
+      height: 250,
+      colors: ["red", "green"],
+    });
+  </script>
+</div>

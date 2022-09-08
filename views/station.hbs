@@ -6,32 +6,5 @@
   {{>latestreading}}
   {{> listreadings}}
   {{> addreading}}
-  <h3>Temperature Trends</h3>
-  <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
-  <div class="ui segment" id="chart"></div>
-  <script>
-    const data = {
-      labels: [
-        {{#each reading.trendLabels}}
-          "{{this}}",
-        {{/each}}
-      ],
-      datasets: [
-        {
-          name: "Temperature", type: "line",
-          values: [
-            {{#each reading.tempTrend}}
-              {{this}},
-            {{/each}}
-          ]
-        }
-      ]
-    }
-    new frappe.Chart("#chart", {
-      data: data,
-      type: "line",
-      height: 180,
-      colors: ["red"]
-    });
-  </script>
+
 </section>

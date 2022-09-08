@@ -39,6 +39,7 @@ const station = {
     const maxWind = analytics?.getMaxWind(station.readings);
     const maxPress = analytics?.getMaxPress(station.readings);
 
+
     const viewData = {
       name: "Station",
       station: stationStore.getStation(stationId),
@@ -62,6 +63,7 @@ const station = {
       maxTemp: maxTemp,
       maxWind: maxWind,
       maxPress: maxPress,
+
     };
     response.render("station", viewData);
   },
@@ -100,31 +102,34 @@ const station = {
     };
     const lat= station.latitude;
     const lng= station.longitude;
-    const callWeather= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=dae60561bd4c79fffdaa062810f637ec`
+    const callWeather= `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&&units=metric&appid=dae60561bd4c79fffdaa062810f637ec`
     const result = await axios.get(callWeather)
     if (result.status === 200) {
       console.log(result.data);
-      const reading = result.data;
+      const reading = result.data.current;
       report.date = analytics?.getTimeStamp();
       report.code = toString(reading.weather[0].id);
-      report.temperature = reading?.main.temp;
-      report.windSpeed = reading?.wind.speed;
-      report.pressure = reading?.main.pressure;
-      report.windDirection = reading?.wind.deg;
-      report.tempTrend = [];
+      report.temperature = reading.temp;
+      report.windSpeed = reading.wind_speed;
+      report.pressure = reading.pressure;
+      report.windDirection = reading.wind_deg;
       report.trendLabels = [];
-      const trends = result.data;
-      for (let i = 0; i < trends?.length; i++) {
+      report.windTrend=[];
+      report.tempTrend = [];
+
+      const trends = result.data.daily;
+      for (let i = 0; i < trends.length; i++) {
+        report.windTrend.push(trends[i].wind_speed);
         report.tempTrend.push(trends[i].temp.day);
         const date = new Date(trends[i].dt * 1000);
         report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
-
       }
     }
-
     logger.info("rendering new report");
+    console.log(report);
     stationStore.addReport(stationId, report);
-    response.redirect("/station/" + stationId);
+    response.redirect("/station/"+stationId);
+
   }
 }
 

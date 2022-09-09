@@ -7,7 +7,7 @@
 <section class="ui segment">
   <div class="ui center aligned header">
     <h1>Weather Top Stations</h1></div>
-  <h4>Welcome {{firstName}} {{station.latitude}}</h4>
+  <h4>Welcome {{user.firstName}}</h4>
 </section>
 </div>
 {{#each stations}}
@@ -24,25 +24,6 @@
     </section>
 {{/each}}
 {{> addstations}}
-<div><link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-           integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-           crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-          integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-          crossorigin=""></script>
-  <div id="map"></div>
-  <script>
-    const map = L.map("map").setView([0,0], 1);
-    L.tileLayer('https://api.maptiler.com/maps/outdoor/{z}/{x}/{y}@2x.png?key=UOU1g4SQcjSFKbfPFKUB',{
-      attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-    }).addTo(map);
-    {{#each stations}}
-    var marker =L.marker([{{latitude}},{{longitude}}]).addTo(map)
-    marker.bindPopup("<b>{{stationName}}</b>").openPopup();
-    {{/each}}
-  </script>
-
-  <style>#map { height: 256px;} </style></div>
-<div id="map"></div>
+{{>map}}
 
 

@@ -1,0 +1,76 @@
+<h3>Trend Charts</h3>
+<div>
+  <script src="https://unpkg.com/frappe-charts@latest"></script>
+  <section>
+  <div class="ui segment" id="chart1"></div>
+  <script>
+    const dataTempWind = {
+      labels: [
+        {{#each station.readings}}
+          "{{date}}",
+        {{/each}}
+      ],
+      datasets: [
+        {
+          name: "Temperature", type: "line",
+          values: [
+            {{#each station.readings}}
+              {{temperature}},
+            {{/each}}
+          ]
+        },
+        {
+          name: "Wind Speed", type: "line",
+          values: [
+            {{#each station.readings}}
+              {{windSpeed}},
+            {{/each}}
+          ]
+        }
+      ]
+    }
+    const chart1= new frappe.Chart("#chart1", {
+      title: "Temperature and Wind Speed Trend",
+      data: dataTempWind,
+      type: "line",
+      lineOptions: {
+        regionFill: 1,
+        dotSize: 6
+      },
+      height: 240,
+      colors: ["red","green","yellow"],
+    });
+  </script>
+  </section>
+</div>
+  <div>
+    <div class="ui segment" id="chart2"></div>
+    <script>
+      const dataPress = {
+        labels: [
+          {{#each station.readings}}
+            "{{date}}",
+          {{/each}}
+        ],
+        datasets: [
+          {
+            name: "Pressure", type: "bar",
+            values: [
+              {{#each station.readings}}
+                {{pressure}},
+              {{/each}}
+            ]
+          },
+        ]
+      }
+      const chart2= new frappe.Chart("#chart2", {
+        title: "Pressure Trend",
+        data: dataPress,
+        type: "bar",
+        height: 240,
+        colors: ["yellow"],
+      });
+    </script>
+  </section>
+  </div>
+</div>

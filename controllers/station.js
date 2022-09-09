@@ -132,7 +132,4 @@ const station = {
 
   }
 }
-
-
-
 module.exports = station;

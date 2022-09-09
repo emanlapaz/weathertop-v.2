@@ -40,7 +40,7 @@ const accounts = {
     response.redirect("/");
   },
 
-  /*update(request, response){
+  update(request, response){
     const user= request.body;
     user.id = uuid.v1();
     userstore.updateUser(user);
@@ -52,7 +52,7 @@ const accounts = {
     }
     logger.info('updating ${user.email}');
     response.redirect("edit");
-  },*/
+  },
 
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);

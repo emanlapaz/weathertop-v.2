@@ -9,7 +9,7 @@ Web Developmet 2 Assignment
 
 I used Webstorm for the code and sourcetree to push to Github.
 
-I also uploaded a video in youtube. URL: 
+I also uploaded a video in youtube. URL: https://youtu.be/yvxUfmJcxOM
 
 The weather top app requires a log in to function.
 

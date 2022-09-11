@@ -5,7 +5,7 @@ This is the Javascript version of the weather top app!
 Release 4
 Eugenio Manlapaz
 
-ICT skills Assignment
+Web Developmet 2 Assignment
 
 I used Webstorm for the code and sourcetree to push to Github.
 

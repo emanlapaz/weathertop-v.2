@@ -16,7 +16,11 @@ const userStore = {
     this.store.save();
   },
 
-  updateUser(user){
+  updateUser(user, updatedUser){
+    user.firstName=updatedUser.firstName;
+    user.lastName=updatedUser.lastName;
+    user.email=updatedUser.email;
+    user.password=updatedUser.password;
     this.store.add(this.collection, user)
     this.store.save();
   },

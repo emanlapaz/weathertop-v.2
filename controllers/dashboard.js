@@ -15,6 +15,7 @@ const dashboard = {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     const stations = stationStore.getUserStations(loggedInUser.id)
+
     stations.sort((a, b) => {
       const nameA = a.stationName.toUpperCase(); // ignore upper and lowercase
       const nameB = b.stationName.toUpperCase(); // ignore upper and lowercase
@@ -53,6 +54,7 @@ const dashboard = {
       const viewData = {
         title: "Station Dashboard",
         stations: stations,
+
       };
       logger.info("about to render", stationStore.getAllStations());
       response.render("dashboard", viewData);

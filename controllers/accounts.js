@@ -8,16 +8,23 @@ const stationStore = require("../models/station-store");
 const accounts = {
   index(request, response) {
     const viewData = {
-      title: "Login or Signup"
+      title: "Login or Signup",
     };
     response.render("index", viewData);
   },
 
   login(request, response) {
     const viewData = {
-      title: "Login to the Service"
+      title: "Login to WeatherTop"
     };
     response.render("login", viewData);
+  },
+
+  edit(request, response){
+    const viewData={
+      title: "Edit account"
+    };
+    response.render("edit", viewData)
   },
 
   logout(request, response) {
@@ -27,7 +34,7 @@ const accounts = {
 
   signup(request, response) {
     const viewData = {
-      title: "Login to the Service"
+      title: "Sign Up "
     };
     response.render("signup", viewData);
   },
@@ -44,13 +51,14 @@ const accounts = {
     const user= request.body;
     user.id = uuid.v1();
     userstore.updateUser(user);
-    const newUser = {
+    const updatedUser = {
       firstName: request.body.firstName,
       lastName: request.body.lastName,
       email: request.body.email,
       password: request.body.password,
     }
     logger.info('updating ${user.email}');
+    userstore.updateUser(user, updatedUser)
     response.redirect("edit");
   },
 

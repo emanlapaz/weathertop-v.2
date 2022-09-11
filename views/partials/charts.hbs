@@ -2,7 +2,7 @@
 <div>
   <script src="https://unpkg.com/frappe-charts@latest"></script>
   <section>
-  <div class="ui segment" id="chart1"></div>
+  <div class="ui segment" id="chart1" style="background-image: linear-gradient(to top, #C3CFE2, #F5F7FA)";></div>
   <script>
     const dataTempWind = {
       labels: [
@@ -38,39 +38,35 @@
         dotSize: 6
       },
       height: 240,
-      colors: ["red","green","yellow"],
+      colors: ["red","green"],
     });
   </script>
   </section>
 </div>
-  <div>
-    <div class="ui segment" id="chart2"></div>
-    <script>
-      const dataPress = {
-        labels: [
+<div class="ui segment" id="chart2" style="background-image: linear-gradient(to top, #C3CFE2, #F5F7FA)";></div>
+<script>
+  const dataPress = {
+    labels: [
+      {{#each station.readings}}
+        "{{date}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Pressure", type: "bar",
+        values: [
           {{#each station.readings}}
-            "{{date}}",
+            {{pressure}},
           {{/each}}
-        ],
-        datasets: [
-          {
-            name: "Pressure", type: "bar",
-            values: [
-              {{#each station.readings}}
-                {{pressure}},
-              {{/each}}
-            ]
-          },
         ]
-      }
-      const chart2= new frappe.Chart("#chart2", {
-        title: "Pressure Trend",
-        data: dataPress,
-        type: "bar",
-        height: 240,
-        colors: ["yellow"],
-      });
-    </script>
-  </section>
-  </div>
-</div>
+      },
+    ]
+  }
+  const chart2= new frappe.Chart("#chart2", {
+    title: "Pressure Trend",
+    data: dataPress,
+    type: "bar",
+    height: 240,
+    colors: ["yellow"],
+  });
+</script>

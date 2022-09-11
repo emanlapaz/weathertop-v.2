@@ -15,6 +15,9 @@ router.get("/signup", accounts.signup);
 router.get("/logout", accounts.logout);
 router.post("/register", accounts.register);
 router.post("/authenticate", accounts.authenticate);
+router.get("/edit", accounts.edit);
+router.post("/accounts/:id/update", accounts.update);
+
 
 router.get("/dashboard", dashboard.index);
 router.get("/dashboard/deletestation/:id", dashboard.deleteStations);
@@ -28,7 +31,6 @@ router.post("/station/:id/addreading", station.addReading);
 router.get("/reading/:id/editreading/:readingid", reading.index);
 router.post("/reading/:id/updatereading/:readingid", reading.update);
 
-//router.get("/station/:id/deletereport/:readingid", station.deleteReport);
 router.post("/station/:id/addreport", station.addReport);
 
 
